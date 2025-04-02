@@ -1,7 +1,7 @@
 export default function Navigation({ setPage, currentPage }) {
     return (
       <nav className="flex justify-center mb-8">
-        <ul className="flex space-x-6 bg-glass backdrop-blur-lg shadow-neomorph rounded-full px-6 py-3">
+        <ul className="flex space-x-4 bg-[#1a1c2d] backdrop-blur-lg rounded-full px-4 py-2 shadow-[0_8px_32px_rgba(0,0,0,0.3)] border border-[#2a2d3e]">
           {[
             { name: 'Feed', key: 'feed' },
             { name: 'Top Users', key: 'topUsers' },
@@ -10,11 +10,11 @@ export default function Navigation({ setPage, currentPage }) {
             <li key={key}>
               <button
                 onClick={() => setPage(key)}
-                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-md text-white text-lg
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 text-white text-sm
                   ${
                     currentPage === key
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-500 scale-105 shadow-lg'
-                      : 'bg-gray-800 bg-opacity-60 hover:bg-opacity-100 hover:scale-105'
+                      ? 'bg-gradient-to-r from-[#4776E6] to-[#8E54E9] shadow-[0_4px_15px_rgba(78,119,230,0.4)]'
+                      : 'hover:bg-[#2a2d3e] hover:shadow-[0_4px_12px_rgba(0,0,0,0.2)]'
                   }`}
               >
                 {name}
